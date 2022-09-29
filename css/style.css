@@ -1,0 +1,1162 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../fontes/poppins/Poppins-Bold.otf)
+}
+
+@font-face {
+    font-family: Poppins Regular;
+    src: url(../fontes/poppins/Poppins-Regular.otf)
+}
+
+@font-face {
+    font-family: GrandeeCP;
+    src: url(../fontes/GrandeeCP.otf)
+}
+
+@font-face {
+    font-family: Poppins Light;
+    src: url(../fontes/poppins/Poppins-Light.otf)
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(../fontes/poppins/Poppins-Medium.otf)
+}
+
+@font-face {
+    font-family: Poppins-Black;
+    src: url(../fontes/poppins/Poppins-Black.otf)
+}
+
+ ::selection {
+    background: #ead583;
+    color: #ffffff;
+}
+
+a,
+a:hover {
+    text-decoration: none!important;
+    color: none!important;
+}
+
+html {
+    background: #ffffff;
+}
+
+body {
+    background: #F2F2F2;
+    overflow-x: hidden!important;
+}
+
+h1 {
+    font-family: Poppins!important;
+    color: #6F7071 !important;
+    font-size: 70px!important;
+    letter-spacing: 19.4px;
+    opacity: 1;
+    float: left;
+    position: relative;
+}
+
+
+/********HOME*********/
+
+header {
+    background: #ffffff;
+    height: 895px;
+    padding: 10px;
+    width: 100%;
+}
+
+#imagem-bee {
+    float: left;
+    position: absolute;
+    width: 30%;
+    right: 25%;
+    top: 10%;
+}
+
+#menu-principal ul {
+    display: none;
+}
+
+#menu-principal ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+#menu-principal ul li a {
+    text-transform: lowercase;
+    color: #6F7071;
+    font-size: 70px;
+}
+
+#titulo {
+    padding-left: 210px;
+}
+
+#texto-home {
+    width: 50%;
+    margin: 15%;
+}
+
+#imagem-home {
+    top: 146px;
+    left: 861px;
+    width: 704px;
+    height: 725px;
+    float: right;
+    opacity: 1;
+}
+
+.redes {
+    position: fixed;
+    bottom: 19px;
+    right: 150px;
+    z-index: 5;
+}
+
+.redes a {
+    color: inherit;
+    width: 20px !important;
+    height: 20px !important;
+    letter-spacing: 8px;
+}
+
+.redes a:link {
+    text-decoration: none;
+}
+
+.redes a i {
+    color: #6F7071;
+    padding: 10px;
+    border-radius: 100%;
+    border: 1px solid #6F7071;
+    font-size: 12px;
+}
+
+header #texto-home .redes a i {
+    background-color: #ffffff;
+}
+
+.redes a i.fab.fa-instagram,
+.redes a i.fab.fa-facebook-f,
+.redes a i.fab.fa-linkedin-in,
+.redes-rodape a i.fab.fa-twitter {
+    width: 33.5px !important;
+}
+
+.redes-rodape {
+    position: relative;
+    margin: 0 auto;
+    display: table;
+    bottom: initial;
+    right: initial;
+}
+
+#menu-efeito {
+    position: relative;
+    display: block;
+    background: #6f7071;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: .5s ease-in-out;
+}
+
+#menu-efeito:before,
+#menu-efeito:after {
+    content: '';
+    background: #6f7071;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#menu-efeito:before {
+    top: -10px;
+}
+
+#menu-efeito:after {
+    bottom: -10px;
+}
+
+input {
+    display: none;
+}
+
+input:checked~label #menu-efeito {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    top: 9px;
+    left: 8px;
+    background: transparent;
+    border: 3px solid #6F7071;
+}
+
+input:checked~label #menu-efeito:before,
+input:checked~label #menu-efeito:after {
+    background: transparent;
+}
+
+#menu-acesso {
+    background: #F1CD31;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 25px;
+    right: 200px;
+    margin-top: -3.4em;
+    text-decoration: none;
+    top: 48px;
+    border: pointer;
+    box-shadow: #F1CD31;
+    transition: box-shadow .50s cubic-bezier(.19, 1, .22, 1);
+}
+
+#menu-acesso:hover {
+    box-shadow: #F1CD31;
+    cursor: pointer;
+}
+
+
+/*animação do menu*/
+
+input:checked~label #menu-acesso {
+    box-shadow: 0 0 0 130vw #F1CD31;
+    z-index: 9999;
+}
+
+
+/* só aparecer o menu ao clicar*/
+
+input:checked~ul {
+    opacity: 1;
+}
+
+
+/*animação e estilo do menu*/
+
+ul {
+    font-family: GrandeeCP!important;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    font-size: 45px;
+    opacity: 0;
+    transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+    z-index: 9999;
+}
+
+
+/*********ÁREA QUEM-SOMOS*********/
+
+.quem-somos-titulo {
+    width: 700px!important;
+    background: transparent;
+    margin: 10%;
+    font-family: GrandeeCP;
+    color: #F1CD33;
+    letter-spacing: 9.39px;
+    font-size: 69px;
+    position: absolute!important;
+    left: 685px;
+    float: right!important;
+    z-index: 1;
+}
+
+.imagem-quem-somos {
+    width: 34%!important;
+    height: 30%;
+    padding: 5%;
+    margin-left: 17%;
+}
+
+.quem-somos-p {
+    width: 600px;
+    margin: 5%;
+    position: relative;
+    top: -250px;
+    left: 899px;
+    color: #6F7071;
+    font-size: 25px;
+    font-family: Poppins Regular;
+}
+
+
+/*********CONTATO********/
+
+#linha-mensagem {
+    width: 100%;
+    border: 1px solid #F1CD31!important;
+    z-index: -1;
+    margin-bottom: -25px!important;
+}
+
+textarea {
+    width: 650px;
+    height: 250px;
+}
+
+#contato {
+    background-image: url(../images/fundocinza.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 130px;
+    margin-top: 250px;
+}
+
+#rodape-vamos-conversar {
+    width: 45%;
+    margin: 0 auto;
+}
+
+#vamos-conversar {
+    width: 40%;
+    font-family: GrandeeCP;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 80px;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+#btn-contato {
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 1px solid #F1CD31!important;
+    color: #6F7071!important;
+    background: #F1CD31!important;
+    font-family: Poppins;
+    text-transform: lowercase;
+    letter-spacing: 7.41px;
+    display: table;
+    /*Tamanho de uma caixa*/
+    margin: 55px auto 0;
+}
+
+#btn-contato:hover {
+    background: transparent!important;
+    border: 1px solid #F1CD31!important;
+    color: #F1CD31!important;
+    transition: 0.3s ease;
+}
+
+#contorno-contato {
+    width: 62%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contato-email {
+    background: #F2F2F2;
+    padding: 5%;
+}
+
+#area-localizacao {
+    background: #F1CD31;
+    padding: 25px;
+    z-index: 1;
+}
+
+#contato-apresentar {
+    font-family: Poppins;
+    font-size: 35px;
+    text-align: center;
+    color: #6F7071;
+}
+
+#contato-texto {
+    width: 38%;
+    font-family: Poppins Light;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    background: #F2F2F2;
+    color: #6F7071;
+    margin: 0 auto;
+}
+
+#entre-em-contato {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+/***********FORMULÁRIO***********/
+
+#corpo-mensagem {
+    max-width: 97%;
+    min-width: 96%;
+    height: 210px;
+    margin: 0 auto;
+    background: #F2F2F2;
+    border: 1px solid #6F7071;
+}
+
+#mensagem {
+    color: #6F7071;
+    font-family: Poppins Light;
+    font-size: 11px;
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+#e-mail {
+    color: #6F7071;
+    font-family: Poppins Light;
+    font-size: 11px;
+    padding-bottom: 1%;
+}
+
+#nome-completo {
+    color: #6F7071;
+    font-family: Poppins Light;
+    font-size: 11px;
+    padding-bottom: 1%;
+}
+
+.form-control {
+    background: #F2F2F2!important;
+    border: 1px solid #6F7071!important;
+}
+
+#nome-completo-barra {
+    text-transform: capitalize;
+}
+
+#email-barra {
+    text-transform: lowercase;
+}
+
+
+/*BRANDING*/
+
+section#portfolio {
+    height: 1420px;
+}
+
+#bran-titulo {
+    width: 461px;
+    margin: 6%;
+    right: 1036px;
+    font-family: GrandeeCP;
+    color: #F1CD31;
+    letter-spacing: 19.4px;
+    font-size: 69px;
+    position: absolute;
+    top: 2714px;
+    z-index: 2;
+    background: rgba(0, 0, 0, .0);
+}
+
+.imagem-brand {
+    width: 49%;
+    height: 20%;
+    padding: 5%;
+    position: relative;
+    right: -20%;
+    opacity: 1;
+    z-index: 1;
+}
+
+#linha-contato {
+    width: 77%;
+    border: 1px solid #F1CD31;
+    z-index: 0;
+    top: 400px;
+    left: 10px;
+    position: relative;
+}
+
+#linha-vertical {
+    border-left: 240px solid #F1CD31;
+    height: 1209px;
+    position: absolute;
+    left: 1144px;
+    margin-left: -300px;
+    top: 2024px;
+}
+
+#linha-cinza {
+    border-left: 90px solid #6F7071;
+    height: 745px;
+    position: absolute;
+    left: 1480px;
+    margin-left: 148px;
+    top: 2309px;
+}
+
+.numeroIndice {
+    font-size: -9px;
+    position: relative;
+    top: -1087px;
+    left: 1440px;
+    font: Bold 100px/123px Poppins;
+    letter-spacing: 0;
+    color: #6F7071;
+    opacity: 1;
+}
+
+.saiba-mais {
+    color: #F1CD33;
+    font-size: 25px;
+    font-family: Poppins;
+    padding: 10px;
+    border-left: 2px solid #F1CD31;
+    text-transform: lowercase;
+    left: 300px;
+    position: absolute;
+    top: 3016px;
+}
+
+.saiba-mais:hover {
+    color: none !important;
+}
+
+.carousel {
+    height: 850px;
+    margin-bottom: 50px;
+    width: 820px;
+    margin: 15%;
+    left: 15%;
+    bottom: 200px;
+}
+
+.carousel-caption {
+    z-index: 0;
+}
+
+.carousel .item {
+    height: 1200px;
+}
+
+.carousel-inner>.item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 1000px;
+    width: 1000px;
+}
+
+#carousel-slide {
+    display: none;
+}
+
+.carousel-control {
+    height: 10%;
+    width: 10%!important;
+    background: none !important;
+}
+
+.carousel-control.left {
+    left: 800px;
+    top: 870px;
+}
+
+.carousel-control.right {
+    left: 800px !important;
+    top: 825px !important;
+}
+
+.fa-chevron-left {
+    border: 2px solid #6F7071;
+    color: #6F7071;
+    padding: 6px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+}
+
+.fa-chevron-right {
+    border: 2px solid #6F7071;
+    color: #6F7071;
+    padding: 6px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+}
+
+
+/*********VIZZE*********/
+
+#imagem-vizze {
+    width: 70%;
+    height: 30%;
+    margin-left: 30%;
+}
+
+#vizze-p {
+    color: #6F7071;
+    font-size: 25px;
+    font-family: Poppins Regular;
+    position: absolute;
+    top: 220px;
+    left: 10px;
+}
+
+#vizze-titulo {
+    width: 280px;
+    font-family: GrandeeCP;
+    color: #F1CD31;
+    letter-spacing: 9.39px;
+    font-size: 75px;
+    position: relative;
+    top: 93px;
+    left: 122px;
+}
+
+#linha-vizze {
+    border: 1px solid #F1CD31 !important;
+    width: 202px;
+    top: 130px;
+    position: absolute;
+    left: -9%;
+}
+
+#linha-kyo {
+    border: 1px solid #F1CD31 !important;
+    width: 202px;
+    top: 130px;
+    position: absolute;
+    left: 100%;
+    z-index: 1;
+}
+
+#v-1 {
+    position: absolute;
+    font-size: 25px;
+    text-transform: lowercase;
+    top: 440px;
+    left: 82%;
+    color: #F1CD31!important;
+    font-family: Poppins;
+    padding: 10px;
+    border-right: 2px solid #F1CD31;
+}
+
+
+/*********KYO*********/
+
+#kyo-titulo {
+    width: 400px;
+    margin: 5%;
+    font-family: GrandeeCP;
+    color: #F1CD31;
+    letter-spacing: 9.49px;
+    font-size: 59px;
+    position: relative;
+    top: 70px;
+    left: 53%;
+}
+
+#imagem-kyo {
+    width: 80%;
+    height: 30%;
+    padding: 5%;
+}
+
+#kyok-p {
+    width: 500px;
+    color: #6F7071;
+    font-size: 25px;
+    font-family: Poppins Regular;
+    top: 40px;
+    opacity: 1;
+    left: 47%;
+    text-align: right;
+}
+
+#veja-mais {
+    position: relative;
+    top: 343px;
+    left: -1px;
+    font-size: 25px;
+    color: #F1CD31!important;
+    text-transform: lowercase;
+    font-family: Poppins;
+    padding: 10px;
+    border-left: 2px solid #F1CD31;
+}
+
+.btn-portfolio {
+    position: relative;
+    width: 80%;
+    background: #6F7071!important;
+    color: #F1CD33!important;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 9.99px;
+    font-family: Poppins-Black;
+    padding: 3%;
+    font-size: 35px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 228px;
+    margin-top: 30px;
+}
+
+h4 {
+    font-family: GrandeeCP!important;
+    font-size: 40px!important;
+    text-align: center!important;
+    padding-top: 60px!important;
+    padding-bottom: 2px!important;
+    color: #F1CD31!important;
+}
+
+#etapas {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: -134px;
+    border: 1px solid #F1CD31;
+}
+
+#definir {
+    right: -282px;
+}
+
+#entender {
+    right: -408px;
+}
+
+#acompanhar {
+    right: -153px;
+}
+
+#metodo-definir {
+    width: 350px;
+    margin: 0 auto;
+    font-family: Poppins Regular;
+    font-size: 16.5px;
+    color: #6F7071;
+    text-align: center;
+    line-height: 25px;
+    background: transparent;
+    margin-left: 130px;
+}
+
+#metodo-acompanhar {
+    width: 350px;
+    margin: 0 auto;
+    font-family: Poppins Regular;
+    font-size: 16.5px;
+    color: #6F7071;
+    text-align: center;
+    line-height: 25px;
+    background: transparent;
+    margin-right: 850px;
+}
+
+#metodo-entender {
+    width: 350px;
+    font-family: Poppins Regular;
+    font-size: 16.5px;
+    color: #6F7071;
+    text-align: center;
+    line-height: 25px;
+    background: transparent;
+    margin-left: 250px;
+}
+
+#entender-titulo {
+    margin-left: 250px;
+}
+
+#acompanhar-titulo {
+    margin-right: 250px;
+}
+
+.fa-dot-circle {
+    background: white;
+    top: -7.5px!important;
+    position: relative;
+    color: #6F7071;
+}
+
+
+/********FINAL DA PÁGINA********/
+
+#entre-em-contato {
+    width: 85%;
+}
+
+#final-telefone-mail {
+    text-align: center;
+    font-size: 13px;
+    font-family: Poppins-Medium;
+    color: #6F7071;
+}
+
+#final-end-cred {
+    font-family: Poppins Light;
+    font-size: 12px;
+    text-align: center;
+    color: #6F7071;
+}
+
+#imagem-final {
+    width: 8.5%;
+    position: relative;
+    left: 45%;
+}
+
+#area-localizacao {
+    background: #F1CD31;
+    padding: 25px;
+    z-index: 1;
+}
+
+#btn-enviar {
+    width: 150px;
+    padding: 10px;
+    background: #6F7071;
+    color: #F1CD31;
+    font-family: Poppins;
+    text-transform: lowercase;
+    position: absolute;
+    letter-spacing: 4px;
+    left: 45%;
+    margin-top: 45px;
+    border: 1px solid #6F7071;
+    border-radius: 50px;
+}
+
+
+/*
+    RESPONSIVIDADE: Medias
+    1300px - 1399px - Laptops.
+    As demais - Desktop.
+*/
+
+@media (min-width:1300px) and (max-width:1399px) {
+    #titulo {
+        padding-left: 151px;
+    }
+    #imagem-bee {
+        right: 129.5px!important;
+        top: 126px;
+    }
+    .imagem-quem-somos {
+        width: 578px!important;
+    }
+    .quem-somos-titulo {
+        font-size: 60px!important;
+        left: 575px!important;
+    }
+    .quem-somos-p {
+        left: 755px!important;
+        font-size: 20px;
+        width: 445px;
+    }
+    #linha-kyo {
+        top: 85px;
+        left: 90%;
+        width: 180px;
+    }
+    #kyo-titulo {
+        left: 130px!important;
+        top: 43px;
+    }
+    #vizze-titulo {
+        top: 40px;
+        left: 125px;
+    }
+    #vizze-p {
+        font-size: 20px;
+        top: 159px;
+    }
+    #linha-vizze {
+        width: 185px;
+        top: 76px;
+    }
+    #veja-mais {
+        left: 9px!important;
+        top: 164px;
+        font-size: 20px;
+    }
+    #kyok-p {
+        font-size: 20px!important;
+        left: 160px!important;
+    }
+    #v-1 {
+        top: 299px!important;
+        left: 510px!important;
+        font-size: 20px;
+    }
+    #entender-titulo {
+        margin-left: 230px!important;
+    }
+    #entender {
+        right: -294px!important;
+    }
+    #metodo-entender {
+        margin-left: 169px;
+        font-size: 14.5px;
+        width: 291px;
+    }
+    #metodo-definir {
+        width: 320px;
+        margin-left: 65px;
+        font-size: 14.5px;
+    }
+    #definir-titulo {
+        margin-left: 40px!important;
+    }
+    #definir {
+        right: -207px;
+    }
+    #metodo-acompanhar {
+        width: 300px;
+        margin-left: -19px;
+        font-size: 14.5px;
+    }
+    #acompanhar-titulo {
+        margin-right: 240x;
+        font-size: 39px!important;
+    }
+    #acompanhar {
+        right: -113px;
+    }
+    #vamos-conversar {
+        width: 55%;
+    }
+    #btn-enviar {
+        font-size: 14px;
+        left: 580px;
+        margin-top: 11px;
+    }
+    #bran-titulo {
+        right: 595px;
+        font-size: 60px;
+        top: 2398px;
+    }
+    .imagem-brand {
+        width: 49%;
+        height: 20%;
+        padding: 5%;
+        position: relative;
+        right: -20%;
+        opacity: 1;
+        z-index: 1;
+    }
+    #linha-contato {
+        top: 402px;
+    }
+    #linha-vertical {
+        left: 887px;
+        top: 1847px;
+        height: 910px;
+    }
+    #linha-cinza {
+        height: 475px;
+        margin-left: -350px;
+        top: 2158px;
+    }
+    .numeroIndice {
+        top: -697px!important;
+        font-size: 77px!important;
+        left: 1022px;
+    }
+    .saiba-mais {
+        font-size: 20px;
+        left: 213px;
+        top: 2606px;
+    }
+    .saiba-mais:hover {
+        color: none !important;
+    }
+    .carousel {
+        height: 650px;
+        margin-bottom: 50px;
+        width: 620px;
+        margin: 15%;
+        left: 15%;
+        top: -430px;
+    }
+    .carousel-caption {
+        z-index: 0;
+    }
+    .carousel .item {
+        height: 1000px;
+    }
+    .carousel-inner>.item>a>img,
+    .carousel-inner>.item>img {
+        line-height: 1;
+        top: 300px;
+    }
+    #carousel-slide {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 20px;
+        filter: alpha(opacity=50);
+    }
+    .carousel-control {
+        height: 8%;
+        width: 8%!important;
+        background: none !important;
+    }
+    .carousel-control.left {
+        left: 622px;
+        top: 910px;
+    }
+    .carousel-control.right {
+        left: 622px !important;
+        top: 960px !important;
+    }
+    .fa-chevron-left {
+        border: 2px solid #6F7071;
+        color: #6F7071;
+        padding: 6px;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+    }
+    .fa-chevron-right {
+        border: 2px solid #6F7071;
+        color: #6F7071;
+        padding: 6px;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+    }
+    #portfolio {
+        height: 1000px!important;
+        background: transparent;
+    }
+}
+
+@media (min-width:1400px) and (max-width:1499px) {
+    #imagem-bee {
+        width: 40%;
+        right: 110px!important;
+        top: 99px;
+    }
+    .quem-somos-titulo {
+        font-size: 55px!important;
+        left: 485px!important;
+        line-height: 75px;
+        top: 857px;
+    }
+    .quem-somos-p {
+        left: 692px!important;
+        font-size: 20px;
+        width: 431px!important;
+        top: -200px!important;
+    }
+    #vizze-titulo {
+        font-size: 65px;
+        top: 46px;
+        left: 140px;
+    }
+    #vizze-p {
+        font-size: 20px;
+        top: 150px;
+    }
+    #linha-vizze {
+        top: 85px;
+    }
+    #veja-mais {
+        top: 200px;
+        font-size: 20px!important;
+    }
+    #kyo-titulo {
+        font-size: 65px;
+        left: 160px!important;
+    }
+    #kyo-p {
+        left: 184px!important;
+    }
+    #kyok-p {
+        left: 213px;
+    }
+    #v-1 {
+        left: 571px;
+    }
+    #definir {
+        right: -230px;
+    }
+    #entender {
+        right: -345px;
+    }
+    #acompanhar {
+        right: -112px
+    }
+    #metodo-definir {
+        width: 250px;
+        background: transparent;
+        margin-left: 123px;
+    }
+    #metodo-acompanhar {
+        width: 250px;
+        background: transparent;
+        margin-left: 12px;
+    }
+    #metodo-entender {
+        width: 250px;
+        background: transparent;
+        margin-left: 236px;
+        font-size: 15px;
+    }
+    #entender-titulo {
+        margin-left: 240x;
+    }
+    #definir-titulo {
+        margin-left: 19px;
+    }
+    #acompanhar-titulo {
+        margin-right: 192px;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    #imagem-bee {
+        right: 350px;
+    }
+    .quem-somos-titulo {
+        font-size: 78px;
+        left: 627px;
+    }
+    .quem-somos-p {
+        top: -276px;
+        left: 857px;
+    }
+    #definir-titulo {
+        margin-left: 43px;
+    }
+    #entender-titulo {
+        margin-left: 300px;
+    }
+    #vizze-titulo {
+        right: 11px;
+    }
+    #vizze-p {
+        left: 22px;
+    }
+    #kyo-titulo {
+        left: 470px;
+    }
+    #kyok-p {
+        left: 420px;
+    }
+    #v-1 {
+        left: 830px;
+    }
+    #veja-mais {
+        left: 10px!important;
+    }
+}
